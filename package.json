@@ -7,7 +7,9 @@
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -21,6 +23,7 @@
   },
   "dependencies": {
     "css-loader": "^3.4.2",
+    "express": "^4.17.1",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
     "moment": "^2.24.0",
